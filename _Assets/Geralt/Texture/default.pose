@@ -1,0 +1,179 @@
+root ground: 0 0 0 0 0 0 1 1 1
+root ground 2: 0 0 0 0 0 0 1 1 1
+root hips: 0 0 0 0 0 0 1 1 1
+spine lower: 0 0 0 0 0 0 1 1 1
+spine upper: 0 0 0 0 0 0 1 1 1
+arm left shoulder 1: 0 0 0 0 0 0 1 1 1
+arm left shoulder 2: 0 0 0 0 0 0 1 1 1
+arm left shoulder ctr: 0 0 0 0 0 0 1 1 1
+arm left elbow ctr 2: 0 0 0 0 0 0 1 1 1
+arm left elbow: 0 0 0 0 0 0 1 1 1
+arm left wrist: 0 0 0 0 0 0 1 1 1
+arm left finger 1a: 0 0 0 0 0 0 1 1 1
+arm left finger 1b: 0 0 0 0 0 0 1 1 1
+arm left finger 1c: 0 0 0 0 0 0 1 1 1
+arm left finger ctr: 0 0 0 0 0 0 1 1 1
+arm left finger 2a: 0 0 0 0 0 0 1 1 1
+arm left finger 2b: 0 0 0 0 0 0 1 1 1
+arm left finger 2c: 0 0 0 0 0 0 1 1 1
+arm left finger 3a: 0 0 0 0 0 0 1 1 1
+arm left finger 3b: 0 0 0 0 0 0 1 1 1
+arm left finger 3c: 0 0 0 0 0 0 1 1 1
+arm left finger 4a: 0 0 0 0 0 0 1 1 1
+arm left finger 4b: 0 0 0 0 0 0 1 1 1
+arm left finger 4c: 0 0 0 0 0 0 1 1 1
+arm left finger 5a: 0 0 0 0 0 0 1 1 1
+arm left finger 5b: 0 0 0 0 0 0 1 1 1
+arm left finger 5c: 0 0 0 0 0 0 1 1 1
+arm left elbow ctr 3: 0 0 0 0 0 0 1 1 1
+arm left wrist ctr: 0 0 0 0 0 0 1 1 1
+arm left strap: 0 0 0 0 0 0 1 1 1
+arm left elbow ctr: 0 0 0 0 0 0 1 1 1
+arm left shoulder ctr 2: 0 0 0 0 0 0 1 1 1
+arm right shoulder 1: 0 0 0 0 0 0 1 1 1
+arm right shoulder 2: 0 0 0 0 0 0 1 1 1
+arm right elbow: 0 0 0 0 0 0 1 1 1
+arm right wrist: 0 0 0 0 0 0 1 1 1
+arm right finger 1a: 0 0 0 0 0 0 1 1 1
+arm right finger 1b: 0 0 0 0 0 0 1 1 1
+arm right finger 1c: 0 0 0 0 0 0 1 1 1
+arm right finger ctr: 0 0 0 0 0 0 1 1 1
+arm right finger 2a: 0 0 0 0 0 0 1 1 1
+arm right finger 2b: 0 0 0 0 0 0 1 1 1
+arm right finger 2c: 0 0 0 0 0 0 1 1 1
+arm right finger 3a: 0 0 0 0 0 0 1 1 1
+arm right finger 3b: 0 0 0 0 0 0 1 1 1
+arm right finger 3c: 0 0 0 0 0 0 1 1 1
+arm right finger 4a: 0 0 0 0 0 0 1 1 1
+arm right finger 4b: 0 0 0 0 0 0 1 1 1
+arm right finger 4c: 0 0 0 0 0 0 1 1 1
+arm right finger 5a: 0 0 0 0 0 0 1 1 1
+arm right finger 5b: 0 0 0 0 0 0 1 1 1
+arm right finger 5c: 0 0 0 0 0 0 1 1 1
+weapon right: 0 0 0 0 0 0 1 1 1
+arm right elbow ctr 3: 0 0 0 0 0 0 1 1 1
+arm right wrist ctr: 0 0 0 0 0 0 1 1 1
+arm right strap: 0 0 0 0 0 0 1 1 1
+arm right elbow ctr 2: 0 0 0 0 0 0 1 1 1
+arm right shoulder ctr: 0 0 0 0 0 0 1 1 1
+arm right elbow ctr: 0 0 0 0 0 0 1 1 1
+arm right shoulder ctr 2: 0 0 0 0 0 0 1 1 1
+head neck lower: 0 0 0 0 0 0 1 1 1
+head neck upper: 0 0 0 0 0 0 1 1 1
+hair ponytail a: 0 0 0 0 0 0 1 1 1
+hair ponytail b: 0 0 0 0 0 0 1 1 1
+hair ponytail c: 0 0 0 0 0 0 1 1 1
+hair back right 1 a: 0 0 0 0 0 0 1 1 1
+hair back right 1 b: 0 0 0 0 0 0 1 1 1
+hair back right 1 c: 0 0 0 0 0 0 1 1 1
+hair back right 1 d: 0 0 0 0 0 0 1 1 1
+hair back right 2 a: 0 0 0 0 0 0 1 1 1
+hair back right 2 b: 0 0 0 0 0 0 1 1 1
+hair back right 2 c: 0 0 0 0 0 0 1 1 1
+hair back right 2 d: 0 0 0 0 0 0 1 1 1
+hair back middle 1 a: 0 0 0 0 0 0 1 1 1
+hair back middle 1 b: 0 0 0 0 0 0 1 1 1
+hair back middle 1 c: 0 0 0 0 0 0 1 1 1
+hair back middle 1 d: 0 0 0 0 0 0 1 1 1
+hair back left 1 a: 0 0 0 0 0 0 1 1 1
+hair back left 1 b: 0 0 0 0 0 0 1 1 1
+hair back left 1 c: 0 0 0 0 0 0 1 1 1
+hair back left 1 d: 0 0 0 0 0 0 1 1 1
+hair back left 2 a: 0 0 0 0 0 0 1 1 1
+hair back left 2 b: 0 0 0 0 0 0 1 1 1
+hair back left 2 c: 0 0 0 0 0 0 1 1 1
+hair back left 2 d: 0 0 0 0 0 0 1 1 1
+hair back middle 2 a: 0 0 0 0 0 0 1 1 1
+hair back middle 2 b: 0 0 0 0 0 0 1 1 1
+hair back middle 2 c: 0 0 0 0 0 0 1 1 1
+hair back middle 2 d: 0 0 0 0 0 0 1 1 1
+head lip upper left: 0 0 0 0 0 0 1 1 1
+head lip upper right: 0 0 0 0 0 0 1 1 1
+head lip upper middle: 0 0 0 0 0 0 1 1 1
+head jaw: 0 0 0 0 0 0 1 1 1
+head lip lower left: 0 0 0 0 0 0 1 1 1
+head lip lower middle: 0 0 0 0 0 0 1 1 1
+head lip lower right: 0 0 0 0 0 0 1 1 1
+head mouth corner left: 0 0 0 0 0 0 1 1 1
+head mouth corner right: 0 0 0 0 0 0 1 1 1
+head tongue 1: 0 0 0 0 0 0 1 1 1
+head tongue 2: 0 0 0 0 0 0 1 1 1
+head cheek right 1: 0 0 0 0 0 0 1 1 1
+head cheek left 1: 0 0 0 0 0 0 1 1 1
+head nostril right: 0 0 0 0 0 0 1 1 1
+head nostril left: 0 0 0 0 0 0 1 1 1
+head cheek left 2: 0 0 0 0 0 0 1 1 1
+head cheek right 2: 0 0 0 0 0 0 1 1 1
+head eyelid lower right: 0 0 0 0 0 0 1 1 1
+head eyelid lower left: 0 0 0 0 0 0 1 1 1
+head eyelid upper right: 0 0 0 0 0 0 1 1 1
+head eyelid upper left: 0 0 0 0 0 0 1 1 1
+head eyebrow right 3: 0 0 0 0 0 0 1 1 1
+head eyebrow right 2: 0 0 0 0 0 0 1 1 1
+head eyebrow right 1: 0 0 0 0 0 0 1 1 1
+head eyebrow left 1: 0 0 0 0 0 0 1 1 1
+head eyebrow left 2: 0 0 0 0 0 0 1 1 1
+head eyebrow left 3: 0 0 0 0 0 0 1 1 1
+head eyeball right: 0 0 0 0 0 0 1 1 1
+head eyeball left: 0 0 0 0 0 0 1 1 1
+head cheek right 3: 0 0 0 0 0 0 1 1 1
+head cheek left 3: 0 0 0 0 0 0 1 1 1
+head neck lower ctr: 0 0 0 0 0 0 1 1 1
+arm left shoulder 1 ctr: 0 0 0 0 0 0 1 1 1
+arm left collar bone ctr: 0 0 0 0 0 0 1 1 1
+spine upper back left peck ctr: 0 0 0 0 0 0 1 1 1
+breast left: 0 0 0 0 0 0 1 1 1
+arm right shoulder 1 ctr: 0 0 0 0 0 0 1 1 1
+arm right collar bone ctr: 0 0 0 0 0 0 1 1 1
+spine upper back right peck ctr: 0 0 0 0 0 0 1 1 1
+breast right: 0 0 0 0 0 0 1 1 1
+spine upper ctr: 0 0 0 0 0 0 1 1 1
+pendant a: 0 0 0 0 0 0 1 1 1
+pendant b: 0 0 0 0 0 0 1 1 1
+spine upper side ctr: 0 0 0 0 0 0 1 1 1
+spine hip upper ctr: 0 0 0 0 0 0 1 1 1
+weapon back: 0 0 0 0 0 0 1 1 1
+weapon steel sword back: 0 0 0 0 0 0 1 1 1
+weapon silver sword back: 0 0 0 0 0 0 1 1 1
+weapon steel sheath: 0 0 0 0 0 0 1 1 1
+weapon silver sheath: 0 0 0 0 0 0 1 1 1
+spine lower back ctr: 0 0 0 0 0 0 1 1 1
+spine hip front ctr: 0 0 0 0 0 0 1 1 1
+pelvis: 0 0 0 0 0 0 1 1 1
+leg left thigh: 0 0 0 0 0 0 1 1 1
+leg left knee: 0 0 0 0 0 0 1 1 1
+leg left ankle: 0 0 0 0 0 0 1 1 1
+leg left toes: 0 0 0 0 0 0 1 1 1
+leg left ankle ctr: 0 0 0 0 0 0 1 1 1
+leg left knee ctr 2: 0 0 0 0 0 0 1 1 1
+leg left knee ctr: 0 0 0 0 0 0 1 1 1
+leg left thigh ctr: 0 0 0 0 0 0 1 1 1
+leg left thigh ctr 2: 0 0 0 0 0 0 1 1 1
+leg right thigh: 0 0 0 0 0 0 1 1 1
+leg right knee: 0 0 0 0 0 0 1 1 1
+leg right ankle: 0 0 0 0 0 0 1 1 1
+leg right toes: 0 0 0 0 0 0 1 1 1
+leg right ankle ctr: 0 0 0 0 0 0 1 1 1
+leg right knee ctr 2: 0 0 0 0 0 0 1 1 1
+leg right knee ctr: 0 0 0 0 0 0 1 1 1
+leg right thigh ctr: 0 0 0 0 0 0 1 1 1
+leg right thigh ctr 2: 0 0 0 0 0 0 1 1 1
+leg right butt: 0 0 0 0 0 0 1 1 1
+leg left butt: 0 0 0 0 0 0 1 1 1
+leg left hip ctr: 0 0 0 0 0 0 1 1 1
+leg right hip ctr: 0 0 0 0 0 0 1 1 1
+hip ctr: 0 0 0 0 0 0 1 1 1
+waiststrap right 3 a: 0 0 0 0 0 0 1 1 1
+waiststrap right 3 b: 0 0 0 0 0 0 1 1 1
+waiststrap right 1 a: 0 0 0 0 0 0 1 1 1
+waiststrap right 1 b: 0 0 0 0 0 0 1 1 1
+waiststrap left 1 a: 0 0 0 0 0 0 1 1 1
+waiststrap left 1 b: 0 0 0 0 0 0 1 1 1
+waiststrap left 3 a: 0 0 0 0 0 0 1 1 1
+waiststrap left 3 b: 0 0 0 0 0 0 1 1 1
+waiststrap left 2 a: 0 0 0 0 0 0 1 1 1
+waiststrap left 2 b: 0 0 0 0 0 0 1 1 1
+waiststrap right 2 a: 0 0 0 0 0 0 1 1 1
+waiststrap right 2 b: 0 0 0 0 0 0 1 1 1
+weapon hook: 0 0 0 0 0 0 1 1 1
+hip front ctr: 0 0 0 0 0 0 1 1 1

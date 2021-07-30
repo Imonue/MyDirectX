@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyFramework", "MyFramework\MyFramework.vcxproj", "{91D10851-649D-4402-A269-DE3C0E49B551}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest", "UnitTest\UnitTest.vcxproj", "{B78F4859-004E-4A33-928E-ADAB0C029BE5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{91D10851-649D-4402-A269-DE3C0E49B551} = {91D10851-649D-4402-A269-DE3C0E49B551}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ModelEditor", "ModelEditor\ModelEditor.vcxproj", "{3F3B4B9A-70FE-40D1-B30A-432811615BCF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{91D10851-649D-4402-A269-DE3C0E49B551} = {91D10851-649D-4402-A269-DE3C0E49B551}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Shaders", "_Shaders", "{E38BA0C0-EEC3-4FB3-BFA0-E20F8612E675}"
+	ProjectSection(SolutionItems) = preProject
+		..\_Shaders\01_Vertex.fx = ..\_Shaders\01_Vertex.fx
+		..\_Shaders\Animation.fx = ..\_Shaders\Animation.fx
+		..\_Shaders\Cube.fx = ..\_Shaders\Cube.fx
+		..\_Shaders\CubeMap.fx = ..\_Shaders\CubeMap.fx
+		..\_Shaders\CubeSky.fx = ..\_Shaders\CubeSky.fx
+		..\_Shaders\DebugLine.fx = ..\_Shaders\DebugLine.fx
+		..\_Shaders\Global.fx = ..\_Shaders\Global.fx
+		..\_Shaders\Mesh.fx = ..\_Shaders\Mesh.fx
+		..\_Shaders\Model.fx = ..\_Shaders\Model.fx
+		..\_Shaders\Rect.fx = ..\_Shaders\Rect.fx
+		..\_Shaders\Terrain.fx = ..\_Shaders\Terrain.fx
+		..\_Shaders\Texture.fx = ..\_Shaders\Texture.fx
+		..\_Shaders\TextureSampler.fx = ..\_Shaders\TextureSampler.fx
+		..\_Shaders\Triangle.fx = ..\_Shaders\Triangle.fx
+		..\_Shaders\World.fx = ..\_Shaders\World.fx
+		..\_Shaders\World2.fx = ..\_Shaders\World2.fx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91D10851-649D-4402-A269-DE3C0E49B551}.Debug|x64.ActiveCfg = Debug|x64
+		{91D10851-649D-4402-A269-DE3C0E49B551}.Debug|x64.Build.0 = Debug|x64
+		{91D10851-649D-4402-A269-DE3C0E49B551}.Debug|x86.ActiveCfg = Debug|Win32
+		{91D10851-649D-4402-A269-DE3C0E49B551}.Debug|x86.Build.0 = Debug|Win32
+		{91D10851-649D-4402-A269-DE3C0E49B551}.Release|x64.ActiveCfg = Release|x64
+		{91D10851-649D-4402-A269-DE3C0E49B551}.Release|x64.Build.0 = Release|x64
+		{91D10851-649D-4402-A269-DE3C0E49B551}.Release|x86.ActiveCfg = Release|Win32
+		{91D10851-649D-4402-A269-DE3C0E49B551}.Release|x86.Build.0 = Release|Win32
+		{B78F4859-004E-4A33-928E-ADAB0C029BE5}.Debug|x64.ActiveCfg = Debug|x64
+		{B78F4859-004E-4A33-928E-ADAB0C029BE5}.Debug|x64.Build.0 = Debug|x64
+		{B78F4859-004E-4A33-928E-ADAB0C029BE5}.Debug|x86.ActiveCfg = Debug|Win32
+		{B78F4859-004E-4A33-928E-ADAB0C029BE5}.Debug|x86.Build.0 = Debug|Win32
+		{B78F4859-004E-4A33-928E-ADAB0C029BE5}.Release|x64.ActiveCfg = Release|x64
+		{B78F4859-004E-4A33-928E-ADAB0C029BE5}.Release|x64.Build.0 = Release|x64
+		{B78F4859-004E-4A33-928E-ADAB0C029BE5}.Release|x86.ActiveCfg = Release|Win32
+		{B78F4859-004E-4A33-928E-ADAB0C029BE5}.Release|x86.Build.0 = Release|Win32
+		{3F3B4B9A-70FE-40D1-B30A-432811615BCF}.Debug|x64.ActiveCfg = Debug|x64
+		{3F3B4B9A-70FE-40D1-B30A-432811615BCF}.Debug|x64.Build.0 = Debug|x64
+		{3F3B4B9A-70FE-40D1-B30A-432811615BCF}.Debug|x86.ActiveCfg = Debug|Win32
+		{3F3B4B9A-70FE-40D1-B30A-432811615BCF}.Debug|x86.Build.0 = Debug|Win32
+		{3F3B4B9A-70FE-40D1-B30A-432811615BCF}.Release|x64.ActiveCfg = Release|x64
+		{3F3B4B9A-70FE-40D1-B30A-432811615BCF}.Release|x64.Build.0 = Release|x64
+		{3F3B4B9A-70FE-40D1-B30A-432811615BCF}.Release|x86.ActiveCfg = Release|Win32
+		{3F3B4B9A-70FE-40D1-B30A-432811615BCF}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD81E20E-F104-423A-9894-DD16A949FCD7}
+	EndGlobalSection
+EndGlobal

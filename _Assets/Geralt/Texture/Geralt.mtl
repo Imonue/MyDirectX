@@ -1,0 +1,116 @@
+newmtl Model001_Material001
+map_Kd SilverSheath.tga
+map_bump SilverSheathBump.tga
+
+newmtl Model001_Material002
+map_Kd SilverSword.tga
+map_bump SilverSwordBump.tga
+
+newmtl Model001_Material003
+map_Kd SteelSword.tga
+map_bump SteelSwordBump.tga
+
+newmtl Model001_Material004
+map_Kd SteelSheath.tga
+map_bump SteelSheathBump.tga
+
+newmtl Model001_Material005
+map_Kd Body.tga
+map_bump BodyBump.tga
+
+newmtl Model001_Material006
+map_Kd Chainmail.tga
+map_bump ChainmailBump.tga
+
+newmtl Model001_Material007
+map_Kd Face.tga
+map_bump FaceBump.tga
+
+newmtl Model001_Material008
+map_Kd Gloves.tga
+map_bump GlovesBump.tga
+
+newmtl Model001_Material009
+map_Kd Hook.tga
+map_bump HookBump.tga
+
+newmtl Model001_Material010
+map_Kd ShirtAccessories.tga
+map_bump ShirtAccessoriesBump.tga
+
+newmtl Model001_Material011
+map_Kd Pants.tga
+map_bump PantsBump.tga
+
+newmtl Model001_Material012
+map_Kd Pendant.tga
+map_bump PendantBump.tga
+
+newmtl Model001_Material013
+map_Kd Wrap.tga
+map_bump WrapBump.tga
+
+newmtl Model001_Material014
+map_Kd Accesories.tga
+map_bump AccesoriesBump.tga
+
+newmtl Model001_Material015
+map_Kd Wrap.tga
+map_bump WrapBump.tga
+
+newmtl Model001_Material016
+map_Kd Body.tga
+map_bump BodyBump.tga
+
+newmtl Model001_Material017
+map_Kd Lower.tga
+map_bump LowerBump.tga
+
+newmtl Model001_Material018
+map_Kd SilverSwordmm.tga
+map_bump SilverSwordBump.tga
+
+newmtl Model001_Material019
+map_Kd SteelSwordmm.tga
+map_bump SteelSwordBump.tga
+
+newmtl Model001_Material020
+map_Kd Gen_Eye_M.tga
+map_bump Gen_N.tga
+
+newmtl Model001_Material021
+map_Kd Hair.tga
+map_bump HairBump.tga
+
+newmtl Model001_Material022
+map_Kd Hair.tga
+map_bump HairBump.tga
+
+newmtl Model001_Material023
+map_Kd Pendantmm.tga
+map_bump PendantBump.tga
+
+newmtl Model001_Material024
+map_Kd Eyes.tga
+map_bump EyesBump.tga
+
+newmtl Model001_Material025
+map_Kd Teeth.tga
+map_bump TeethBump.tga
+
+newmtl Model001_Material026
+map_Kd Eye Under Shadow.tga
+map_bump Eye Under ShadowBump.tga
+
+newmtl Model001_Material027
+map_Kd Beard.tga
+
+newmtl Model001_Material028
+map_Kd Beard.tga
+
+newmtl Model001_Material029
+map_Kd Eye Shadow.tga
+
+newmtl Model001_Material030
+map_Kd Eyelashes.tga
+

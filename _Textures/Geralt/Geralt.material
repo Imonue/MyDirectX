@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Materials xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Material>
+        <Name>07 - Default</Name>
+        <DiffuseFile></DiffuseFile>
+        <SpecularFile></SpecularFile>
+        <NormalFile></NormalFile>
+        <Ambient R="0.58823532" G="0.58823532" B="0.58823532" A="1"/>
+        <Diffuse R="0.58823532" G="0.58823532" B="0.58823532" A="1"/>
+        <Specular R="0.89999998" G="0.89999998" B="0.89999998" A="1.9999999"/>
+        <Emissive R="0" G="0" B="0" A="1"/>
+    </Material>
+    <Material>
+        <Name>Material #42</Name>
+        <DiffuseFile>Face.tga</DiffuseFile>
+        <SpecularFile>Face.tga</SpecularFile>
+        <NormalFile>Face.tga</NormalFile>
+        <Ambient R="0.588" G="0.588" B="0.588" A="1"/>
+        <Diffuse R="0.588" G="0.588" B="0.588" A="1"/>
+        <Specular R="0.89999998" G="0.89999998" B="0.89999998" A="2"/>
+        <Emissive R="0" G="0" B="0" A="1"/>
+    </Material>
+    <Material>
+        <Name>Material #43</Name>
+        <DiffuseFile>Hair.tga</DiffuseFile>
+        <SpecularFile>Hair.tga</SpecularFile>
+        <NormalFile>Hair.tga</NormalFile>
+        <Ambient R="0.588" G="0.588" B="0.588" A="1"/>
+        <Diffuse R="0.588" G="0.588" B="0.588" A="1"/>
+        <Specular R="0.89999998" G="0.89999998" B="0.89999998" A="2"/>
+        <Emissive R="0" G="0" B="0" A="1"/>
+    </Material>
+    <Material>
+        <Name>Material #41</Name>
+        <DiffuseFile>Eyes.tga</DiffuseFile>
+        <SpecularFile>Eyes.tga</SpecularFile>
+        <NormalFile>Eyes.tga</NormalFile>
+        <Ambient R="0.588" G="0.588" B="0.588" A="1"/>
+        <Diffuse R="0.588" G="0.588" B="0.588" A="1"/>
+        <Specular R="0.89999998" G="0.89999998" B="0.89999998" A="2"/>
+        <Emissive R="0" G="0" B="0" A="1"/>
+    </Material>
+</Materials>
