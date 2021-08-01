@@ -21,6 +21,21 @@ void AnimationDemo::Update()
 
 void AnimationDemo::Render()
 {
+	static float speed = 1.0f;
+	ImGui::SliderFloat("Speed", &speed, 0.1f, 5.0f);
+
+	static float takeTime = 1.0f;
+	ImGui::SliderFloat("Take Time", &takeTime, 0.1f, 5.0f);
+
+	static int clip = 0;
+	if (Keyboard::Get()->Down(VK_SPACE))
+	{
+		clip++;
+		clip %= 4;
+
+		kachujin->PlayerTweenMode(clip, speed, takeTime);
+	}
+
 	ImGui::SliderFloat3("Direction2", direction, -1, +1);
 	shader->AsVector("Direction")->SetFloatVector(direction);
 

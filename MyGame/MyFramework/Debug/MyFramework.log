@@ -1,3 +1,97 @@
-﻿  MyFramework.vcxproj -> D:\ONuE\Dev\Game\MyDirectX\MyGame\Debug\MyFramework.lib
+﻿  MyFramework.cpp
+  CubeSky.cpp
+  Terrain.cpp
+  Mesh.cpp
+  MeshCube.cpp
+  MeshCylinder.cpp
+  MeshGrid.cpp
+  MeshQuad.cpp
+  MeshSphere.cpp
+  Model.cpp
+  ModelAnimator.cpp
+  ModelClip.cpp
+  ModelMesh.cpp
+  ModelRender.cpp
+  CubeMap.cpp
+  Buffers.cpp
+  Context.cpp
+  DebugLine.cpp
+  Material.cpp
+  PerFrame.cpp
+  Renderer.cpp
+  Shader.cpp
+  Texture.cpp
+  Transform.cpp
+  D3D.cpp
+  Gui.cpp
+  Keyboard.cpp
+  Mouse.cpp
+  Time.cpp
+  Window.cpp
+  BinaryFile.cpp
+  Math.cpp
+  Path.cpp
+  String.cpp
+  Xml.cpp
+  Camera.cpp
+  Freedom.cpp
+  Orthographic.cpp
+  Perspective.cpp
+  Projection.cpp
+  Viewport.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xstring(2468,23): warning C4244: '인수': '_Elem'에서 'const _Elem'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Elem=wchar_t
+          ]
+          and
+          [
+              _Elem=char
+          ] (소스 파일 컴파일 중 Utilities\String.cpp)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xstring(2479): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<_Iter>(_Iter,const _Iter,std::input_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ] (소스 파일 컴파일 중 Utilities\String.cpp)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xstring(2479): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<_Iter>(_Iter,const _Iter,std::input_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ] (소스 파일 컴파일 중 Utilities\String.cpp)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xstring(2459): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<_Iter>(const _Iter,const _Iter,std::forward_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ] (소스 파일 컴파일 중 Utilities\String.cpp)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xstring(2459): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<_Iter>(const _Iter,const _Iter,std::forward_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ] (소스 파일 컴파일 중 Utilities\String.cpp)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xstring(3092): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<wchar_t*,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *,
+              _Alloc=std::allocator<char>
+          ] (소스 파일 컴파일 중 Utilities\String.cpp)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xstring(3092): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<wchar_t*,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *,
+              _Alloc=std::allocator<char>
+          ] (소스 파일 컴파일 중 Utilities\String.cpp)
+D:\ONuE\Dev\Game\MyDirectX\MyGame\MyFramework\Utilities\String.cpp(145): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::assign<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(const _Iter,const _Iter)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>
+          ]
+D:\ONuE\Dev\Game\MyDirectX\MyGame\MyFramework\Utilities\String.cpp(145): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::assign<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(const _Iter,const _Iter)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>
+          ]
+  MyFramework.vcxproj -> D:\ONuE\Dev\Game\MyDirectX\MyGame\Debug\MyFramework.lib
           1개 파일이 복사되었습니다.
           1개 파일이 복사되었습니다.

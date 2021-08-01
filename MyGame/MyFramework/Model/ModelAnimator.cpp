@@ -7,8 +7,8 @@ ModelAnimator::ModelAnimator(Shader* shader)
 	model = new Model();
 	transform = new Transform(shader);
 
-	frameBuffer = new ConstantBuffer(&keyframeDesc, sizeof(KeyframeDesc));
-	sFrameBuffer = shader->AsConstantBuffer("CB_AnimationFrame");
+	frameBuffer = new ConstantBuffer(&tweenDesc, sizeof(TweenDesc));
+	sFrameBuffer = shader->AsConstantBuffer("CB_TweenFrame");
 }
 
 ModelAnimator::~ModelAnimator()
@@ -25,11 +25,60 @@ ModelAnimator::~ModelAnimator()
 
 void ModelAnimator::Update()
 {
-	ImGui::InputInt("Clip", &keyframeDesc.Clip);
-	keyframeDesc.Clip %= model->ClipCount();
+	//ImGui::InputInt("Clip", &keyframeDesc.Clip);
+	//keyframeDesc.Clip %= model->ClipCount();
 
-	ImGui::InputInt("CurrFrame", (int*)&keyframeDesc.CurrFrame);
-	keyframeDesc.CurrFrame = model->ClipByIndex(keyframeDesc.Clip)->FrameCount();
+	//ImGui::InputInt("CurrFrame", (int*)&keyframeDesc.CurrFrame);
+	//keyframeDesc.CurrFrame %= model->ClipByIndex(keyframeDesc.Clip)->FrameCount();
+
+	TweenDesc& desc = tweenDesc;
+
+	//현재 애니메이션
+	{
+		ModelClip* clip = model->ClipByIndex(desc.Curr.Clip);
+		desc.Curr.RunningTime += Time::Delta();
+		float time = 1.0f / clip->FrameRate() / desc.Curr.Speed;
+		if (desc.Curr.Time >= 1.0f) // 일정 시간동안 애니메이션 반복
+		{
+			desc.Curr.RunningTime = 0;
+			desc.Curr.CurrFrame = (desc.Curr.CurrFrame + 1) % clip->FrameCount();
+			desc.Curr.NextFrame = (desc.Curr.CurrFrame + 1) % clip->FrameCount(); // 보간을 위한 프레임
+		}
+		desc.Curr.Time = desc.Curr.RunningTime / time;
+	}
+
+	if (desc.Next.Clip > -1)
+	{
+		desc.ChangeTime += Time::Delta();
+		desc.TweenTime = desc.ChangeTime / desc.TakeTime;
+
+		if (desc.TweenTime >= 1.0f) // 1보다 크다는 애기는 애니메이션 전환이 완료된 상태
+		{
+			desc.Curr = desc.Next;
+
+			desc.Next.Clip = -1;
+			desc.Next.CurrFrame = 0;
+			desc.Next.NextFrame = 0;
+			desc.Next.Time = 0;
+			desc.Next.RunningTime = 0.0f;
+
+			desc.ChangeTime = 0.0f;
+			desc.TweenTime = 0.0f;
+		}
+		else // 변환이 완료가 되지 않은 상태
+		{
+			ModelClip* clip = model->ClipByIndex(desc.Next.Clip);
+			desc.Next.RunningTime += Time::Delta();
+			float time = 1.0f / clip->FrameRate() / desc.Next.Speed;
+			if (desc.Next.Time >= 1.0f) // 일정 시간동안 애니메이션 반복
+			{
+				desc.Next.RunningTime = 0;
+				desc.Next.CurrFrame = (desc.Next.CurrFrame + 1) % clip->FrameCount();
+				desc.Next.NextFrame = (desc.Next.CurrFrame + 1) % clip->FrameCount(); // 보간을 위한 프레임
+			}
+			desc.Next.Time = desc.Next.RunningTime / time;
+		}
+	}
 
 
 	if (texture == NULL) // 텍스처가 NULL이면 생성 후 쉐이더로 전달
@@ -75,6 +124,13 @@ void ModelAnimator::Pass(UINT pass)
 {
 	for (ModelMesh* mesh : model->Meshes())
 		mesh->Pass(pass);
+}
+
+void ModelAnimator::PlayerTweenMode(UINT clip, float speed, float takeTime)
+{
+	tweenDesc.TakeTime = takeTime;
+	tweenDesc.Next.Clip = clip;
+	tweenDesc.Next.Speed = speed;
 }
 
 void ModelAnimator::CreateTexture()

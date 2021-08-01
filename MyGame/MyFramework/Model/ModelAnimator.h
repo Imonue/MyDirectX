@@ -19,6 +19,8 @@ public:
 
 	void Pass(UINT pass);
 
+	void PlayerTweenMode(UINT clip, float speed = 1.0f, float takeTime = 1.0f); // takeTime - 한 동작과 다음 동작이 전환될때까지에 소요시간
+
 private:
 	// 실제로 할당할 수 있는 함수
 	void CreateTexture();
@@ -70,10 +72,28 @@ private:
 		float Speed = 1.0f; // 애니메이션 속도
 
 		Vector2 Padding;
-	} keyframeDesc;
+	}; //keyframeDesc;
 
 	ConstantBuffer* frameBuffer;
 	ID3DX11EffectConstantBuffer* sFrameBuffer;
+
+	// 현재 동작과 다음동작을 관리할 수 있는 구조체
+	struct TweenDesc
+	{
+		float TakeTime = 1.0f; // 애니메이션이 변화할 시간
+		float TweenTime = 0.0f;// 변해가는 시간을 기록
+		float ChangeTime = 0.0f;
+		float Padding;
+
+		KeyframeDesc Curr; // 현재 동작
+		KeyframeDesc Next; // 다음 동작
+
+		TweenDesc()
+		{
+			Curr.Clip = 0;
+			Next.Clip = -1;
+		}
+	} tweenDesc;
 
 private:
 	Shader* shader;
