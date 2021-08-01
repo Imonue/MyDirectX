@@ -54,6 +54,11 @@ void ExportFile::Kachujin()
 	SafeDelete(conv);
 
 	conv = new Converter();
+	conv->ReadFile(L"Kachujin/Sword And Shield Walk.fbx");
+	conv->ExportAnimClip(0, L"Kachujin/Sword And Shield Walk");
+	SafeDelete(conv);
+
+	conv = new Converter();
 	conv->ReadFile(L"Kachujin/Sword And Shield Run.fbx");
 	conv->ExportAnimClip(0, L"Kachujin/Sword And Shield Run");
 	SafeDelete(conv);

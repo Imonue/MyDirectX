@@ -1,9 +1,25 @@
-ModelAnimator::Update() 수정
-Shader-Animation::SetAnimationWorld 수정
-ModelAnimator::PlayerTweenMode(UINT clip, float speed) 추가
-AnimationDemo::Render() 수정
-ModelAnimator.h TweenDesc구조체 및 변수 생성, keyframeDesc변수 삭제
-ModelAnimator.cpp keyframeDesc변수를 tweenDesc 변수로 변경
-ModelAnimator::Update() 수정 - 현재 애니메이션과 다음 애니메이션사이를 변경하는 Tween과 Lerp 함수 생성
-위에 변경사항에 따른 쉐이더 수정
-CB_AnimationFrame -> CB_TweenFrame이름으로 변경 후 ModelAnimator.cpp에서도 변경 
+2021-08-01 20:04
+
+1. ModelAnimator.h에 BlendDesc 구조체 추가.
+
+2. ModelAnimator.h에 변수 2개 추가
+blendBuffer
+sBlendBuffer
+
+3. ModelAnimator.cpp 생성자에 blendBuffer, sblendBuffer 초기화
+   ModelAnimator.cpp 소멸자에 blendBuffer 소멸
+
+4. ModeAnimator 클래스의 update 함수를 UpdateTweenMode와 UpdateBlendMode로 분할 후 함수 생성
+
+5. Animation.fx 쉐이더 수정
+	BlendFrame 구조체 생성
+	CB_BlendFrames Cbuffer 생성
+	SetAnimationWorld -> SetTweenWorld로 함수명 변경
+	SetBlendWorld 함수 생성
+
+6. ModelAnimator 클래스에 void PlayBlendMode() 함수 생성
+
+7. AnimationDemo에서 조정
+
+
+

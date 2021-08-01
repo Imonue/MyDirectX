@@ -9,6 +9,9 @@ ModelAnimator::ModelAnimator(Shader* shader)
 
 	frameBuffer = new ConstantBuffer(&tweenDesc, sizeof(TweenDesc));
 	sFrameBuffer = shader->AsConstantBuffer("CB_TweenFrame");
+
+	blendBuffer = new ConstantBuffer(&blendDesc, sizeof(BlendDesc));
+	sBlendBuffer = shader->AsConstantBuffer("CB_BlendFrame");
 }
 
 ModelAnimator::~ModelAnimator()
@@ -21,16 +24,34 @@ ModelAnimator::~ModelAnimator()
 	SafeRelease(srv);
 
 	SafeDelete(frameBuffer);
+	SafeDelete(blendBuffer);
 }
 
 void ModelAnimator::Update()
 {
-	//ImGui::InputInt("Clip", &keyframeDesc.Clip);
-	//keyframeDesc.Clip %= model->ClipCount();
+	if (blendDesc.Mode == 0) // Tween Mode
+	{
+		UpdateTweenMode();
+	}
+	else                     // Blend Mode
+	{
+		UpdateBlendMode();
+	}
 
-	//ImGui::InputInt("CurrFrame", (int*)&keyframeDesc.CurrFrame);
-	//keyframeDesc.CurrFrame %= model->ClipByIndex(keyframeDesc.Clip)->FrameCount();
+	if (texture == NULL) // 텍스처가 NULL이면 생성 후 쉐이더로 전달
+	{
+		for (ModelMesh* mesh : model->Meshes()) // 쉐이더를 메쉬마다 할당
+			mesh->SetShader(shader);
 
+		CreateTexture();
+	}
+
+	for (ModelMesh* mesh : model->Meshes())
+		mesh->Update();
+}
+
+void ModelAnimator::UpdateTweenMode()
+{
 	TweenDesc& desc = tweenDesc;
 
 	//현재 애니메이션
@@ -79,24 +100,34 @@ void ModelAnimator::Update()
 			desc.Next.Time = desc.Next.RunningTime / time;
 		}
 	}
+}
 
+void ModelAnimator::UpdateBlendMode()
+{
+	BlendDesc& desc = blendDesc;
 
-	if (texture == NULL) // 텍스처가 NULL이면 생성 후 쉐이더로 전달
+	for (UINT i = 0; i < 3; i++)
 	{
-		for (ModelMesh* mesh : model->Meshes()) // 쉐이더를 메쉬마다 할당
-			mesh->SetShader(shader);
-
-		CreateTexture();
+		ModelClip* clip = model->ClipByIndex(desc.Clip[i].Clip);
+		desc.Clip[i].RunningTime += Time::Delta();
+		float time = 1.0f / clip->FrameRate() / desc.Clip[i].Speed;
+		if (desc.Clip[i].Time >= 1.0f) // 일정 시간동안 애니메이션 반복
+		{
+			desc.Clip[i].RunningTime = 0;
+			desc.Clip[i].CurrFrame = (desc.Clip[i].CurrFrame + 1) % clip->FrameCount();
+			desc.Clip[i].NextFrame = (desc.Clip[i].CurrFrame + 1) % clip->FrameCount(); // 보간을 위한 프레임
+		}
+		desc.Clip[i].Time = desc.Clip[i].RunningTime / time;
 	}
-
-	for (ModelMesh* mesh : model->Meshes())
-		mesh->Update();
 }
 
 void ModelAnimator::Render()
 {
 	frameBuffer->Render();
 	sFrameBuffer->SetConstantBuffer(frameBuffer->Buffer());
+
+	blendBuffer->Render();
+	sBlendBuffer->SetConstantBuffer(blendBuffer->Buffer());
 
 	for (ModelMesh* mesh : model->Meshes())
 	{
@@ -126,11 +157,28 @@ void ModelAnimator::Pass(UINT pass)
 		mesh->Pass(pass);
 }
 
-void ModelAnimator::PlayerTweenMode(UINT clip, float speed, float takeTime)
+void ModelAnimator::PlayTweenMode(UINT clip, float speed, float takeTime)
 {
+	blendDesc.Mode = 0;
+
 	tweenDesc.TakeTime = takeTime;
 	tweenDesc.Next.Clip = clip;
 	tweenDesc.Next.Speed = speed;
+}
+
+void ModelAnimator::PlayBlendMode(UINT clip, UINT clip1, UINT clip2)
+{
+	blendDesc.Mode = 1;
+
+	blendDesc.Clip[0].Clip = clip;
+	blendDesc.Clip[1].Clip = clip1;
+	blendDesc.Clip[2].Clip = clip2;
+}
+
+void ModelAnimator::SetBlendAlpha(float alpha)
+{
+	alpha = Math::Clamp(alpha, 0.0f, 2.0f); // 값의 범위 0.0f ~ 2.0f안으로 제한
+	blendDesc.Alpha = alpha;
 }
 
 void ModelAnimator::CreateTexture()

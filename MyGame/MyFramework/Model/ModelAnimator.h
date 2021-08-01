@@ -7,6 +7,12 @@ public:
 	~ModelAnimator();
 
 	void Update();
+
+private:
+	void UpdateTweenMode();
+	void UpdateBlendMode();
+
+public:
 	void Render();
 
 public:
@@ -19,7 +25,9 @@ public:
 
 	void Pass(UINT pass);
 
-	void PlayerTweenMode(UINT clip, float speed = 1.0f, float takeTime = 1.0f); // takeTime - 한 동작과 다음 동작이 전환될때까지에 소요시간
+	void PlayTweenMode(UINT clip, float speed = 1.0f, float takeTime = 1.0f); // takeTime - 한 동작과 다음 동작이 전환될때까지에 소요시간
+	void PlayBlendMode(UINT clip, UINT clip1, UINT clip2);
+	void SetBlendAlpha(float alpha);
 
 private:
 	// 실제로 할당할 수 있는 함수
@@ -94,6 +102,20 @@ private:
 			Next.Clip = -1;
 		}
 	} tweenDesc;
+
+private:
+	// 애니메이션 Blend를 위한 구조체
+	struct BlendDesc
+	{
+		UINT Mode = 0; // Mode가 0보다 크면 BlendMode로 작업이 될 것이고 0이라면 TweenMode로 진행
+		float Alpha = 0; // 애니메이션을 섞을 정도 언리얼엔진에서 녹색 점
+		Vector2 Padding;
+
+		KeyframeDesc Clip[3]; // 동작 3개를 고정시킨다는 가정
+	} blendDesc;
+
+	ConstantBuffer* blendBuffer;
+	ID3DX11EffectConstantBuffer* sBlendBuffer;
 
 private:
 	Shader* shader;
