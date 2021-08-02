@@ -3,9 +3,20 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="InstancingDemo.cpp">
+      <Filter>Instancing</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="InstancingDemo.h">
+      <Filter>Instancing</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Instancing">
+      <UniqueIdentifier>{088edc6b-35ab-4808-9016-40a58e8a5609}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

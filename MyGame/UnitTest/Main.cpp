@@ -2,9 +2,11 @@
 #include "Main.h"
 #include "Systems/Window.h"
 
+#include "InstancingDemo.h"
+
 void Main::Initialize()
 {
-
+	Push(new InstancingDemo());
 }
 
 void Main::Ready()

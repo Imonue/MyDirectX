@@ -22,4 +22,11 @@ sBlendBuffer
 7. AnimationDemo에서 조정
 
 
+2021-08-02 16:19
+
+1. UnitTest 시작 프로그램 설정후 InstaingDemo.h, cpp 생성
+
+2. Instainc.fx 쉐이더 생성(Mesh.fx와 동일한 쉐이더를 수정)
+
+3. D3D.h, D3D.cpp 수정(외부 그래픽카드 메모리를 사용)
 

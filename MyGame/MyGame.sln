@@ -24,6 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Shaders", "_Shaders", "{E3
 		..\_Shaders\CubeSky.fx = ..\_Shaders\CubeSky.fx
 		..\_Shaders\DebugLine.fx = ..\_Shaders\DebugLine.fx
 		..\_Shaders\Global.fx = ..\_Shaders\Global.fx
+		..\_Shaders\Instancing.fx = ..\_Shaders\Instancing.fx
 		..\_Shaders\Mesh.fx = ..\_Shaders\Mesh.fx
 		..\_Shaders\Model.fx = ..\_Shaders\Model.fx
 		..\_Shaders\Rect.fx = ..\_Shaders\Rect.fx
