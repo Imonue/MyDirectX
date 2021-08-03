@@ -11,7 +11,7 @@ public:
 
 public:
 	Shader* shader;
-	MeshSphere* sphere;
+	MeshRender* sphere;
 
 	ID3D11ShaderResourceView* srv;
 	ID3DX11EffectShaderResourceVariable* sSrv;

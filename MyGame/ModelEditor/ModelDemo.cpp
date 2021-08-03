@@ -13,66 +13,29 @@ void ModelDemo::Initialize()
 	Airplane();
 	Tower();
 	Tank();
-	//Geralt();
-
-
-	sky = new CubeSky(L"Environment/GrassCube1024.dds");
-
-	gridShader = new Shader(L"Mesh.fx");
-	grid = new MeshGrid(gridShader, 6, 6);
-	grid->GetTransform()->Scale(12, 1, 12);
-	grid->DiffuseMap(L"Floor.png");
-
 }
 
 void ModelDemo::Update()
 {
-	sky->Update();
-	grid->Update();
-
 	if (airplane != NULL) airplane->Update();
 	if (tower != NULL) tower->Update();
 	if (tank != NULL) tank->Update();
-	//if (geralt != NULL) geralt->Update();
 }
 
 void ModelDemo::Render()
 {
-	ImGui::SliderFloat3("Direction", direction, -1, +1);
-	shader->AsVector("Direction")->SetFloatVector(direction);
-	gridShader->AsVector("Direction")->SetFloatVector(direction);
-
-	static int pass = 0;
-	ImGui::InputInt("Pass", &pass);
-	pass %= 2;
-
-
-
-	sky->Render();
-	grid->Render();
-
 	if (airplane != NULL)
 	{
-		airplane->Pass(pass);
 		airplane->Render();
 	}
-
 	if (tower != NULL)
 	{
-		tower->Pass(pass);
 		tower->Render();
 	}
-
 	if (tank != NULL)
 	{
-		tank->Pass(pass);
 		tank->Render();
 	}
-
-	//if (geralt != NULL) {
-	//	geralt->Pass(pass);
-	//	geralt->Render();
-	//}
 }
 
 void ModelDemo::Airplane()
@@ -98,12 +61,4 @@ void ModelDemo::Tank()
 	tank->ReadMesh(L"Tank/Tank");
 	tank->ReadMaterial(L"Tank/Tank");
 	tank->GetTransform()->Position(20, 0, 0);
-}
-
-void ModelDemo::Geralt()
-{
-	geralt = new ModelRender(shader);
-	geralt->ReadMesh(L"Geralt/Geralt");
-	geralt->ReadMaterial(L"Geralt/Geralt");
-	geralt->GetTransform()->Position(0, 0, -20);
 }

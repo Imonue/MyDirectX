@@ -13,6 +13,9 @@
     <ClCompile Include="AnimationDemo.cpp">
       <Filter>Demo</Filter>
     </ClCompile>
+    <ClCompile Include="MeshDemo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -26,6 +29,9 @@
       <Filter>Writer</Filter>
     </ClInclude>
     <ClInclude Include="AnimationDemo.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshDemo.h">
       <Filter>Demo</Filter>
     </ClInclude>
   </ItemGroup>

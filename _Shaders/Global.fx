@@ -86,6 +86,19 @@ struct VertexTextureNormal
 
 ///////////////////////////////////////////////////////////////////////////////
 
+// 메시, 모델, 애니메이션이 모두 사용하는 Output 자료형
+// MeshOutput을 통해서 픽셀 셰이더로 전달
+struct MeshOutput
+{
+    float4 Position : SV_Position0; // Resterizing Position
+    float3 oPosition : Position1; // Original Position
+    
+    float3 Normal : Normal;
+    float2 Uv : Uv;
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
 SamplerState LinearSampler
 {
     Filter = MIN_MAG_MIP_LINEAR;

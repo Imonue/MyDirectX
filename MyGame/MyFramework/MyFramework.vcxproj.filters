@@ -41,9 +41,6 @@
     <ClCompile Include="Environment\Terrain.cpp">
       <Filter>Environment</Filter>
     </ClCompile>
-    <ClCompile Include="Objects\CubeMap.cpp">
-      <Filter>Objects</Filter>
-    </ClCompile>
     <ClCompile Include="Renders\Buffers.cpp">
       <Filter>Renders</Filter>
     </ClCompile>
@@ -122,6 +119,9 @@
     <ClCompile Include="Viewer\Viewport.cpp">
       <Filter>Viewer</Filter>
     </ClCompile>
+    <ClCompile Include="Meshes\MeshRender.cpp">
+      <Filter>Meshes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyFramework.h" />
@@ -163,9 +163,6 @@
     </ClInclude>
     <ClInclude Include="Environment\Terrain.h">
       <Filter>Environment</Filter>
-    </ClInclude>
-    <ClInclude Include="Objects\CubeMap.h">
-      <Filter>Objects</Filter>
     </ClInclude>
     <ClInclude Include="Renders\Buffers.h">
       <Filter>Renders</Filter>
@@ -250,6 +247,9 @@
     </ClInclude>
     <ClInclude Include="Viewer\Viewport.h">
       <Filter>Viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\MeshRender.h">
+      <Filter>Meshes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

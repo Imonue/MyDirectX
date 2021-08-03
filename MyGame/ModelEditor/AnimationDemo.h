@@ -20,6 +20,4 @@ private:
 	Shader* shader;
 
 	ModelAnimator* kachujin = NULL;
-
-	Vector3 direction = Vector3(-1, -1, +1);
 };

@@ -1,7 +1,1 @@
-﻿  stdafx.cpp
-  AnimationDemo.cpp
-  Converter.cpp
-  ExportFile.cpp
-  Main.cpp
-  ModelDemo.cpp
-  ModelEditor.vcxproj -> D:\ONuE\Dev\Game\MyDirectX\MyGame\Debug\ModelEditor.exe
+﻿  ModelEditor.vcxproj -> D:\ONuE\Dev\Game\MyDirectX\MyGame\Debug\ModelEditor.exe

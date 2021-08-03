@@ -17,7 +17,6 @@ private:
 	void Airplane();
 	void Tower();
 	void Tank();
-	void Geralt();
 
 private:
 	Shader* shader;
@@ -25,13 +24,4 @@ private:
 	ModelRender* airplane = NULL;
 	ModelRender* tower = NULL;
 	ModelRender* tank = NULL;
-	ModelRender* geralt = NULL;
-
-
-	CubeSky* sky;
-
-	Vector3 direction = Vector3(-1, -1, +1);
-
-	Shader* gridShader;
-	MeshGrid* grid;
 };

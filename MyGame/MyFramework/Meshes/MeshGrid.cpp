@@ -1,8 +1,8 @@
 #include "MyFramework.h"
 #include "MeshGrid.h"
 
-MeshGrid::MeshGrid(Shader* shader, float offsetU, float offsetV)
-	: Mesh(shader), offsetU(offsetU), offsetV(offsetV)
+MeshGrid::MeshGrid(float offsetU, float offsetV)
+	: offsetU(offsetU), offsetV(offsetV)
 {
 
 }
